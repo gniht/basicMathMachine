@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>calculator</title>
+</head>
+<body>
+  <div class="container">
+    <section class="number-inputs">
+      <label for="num1">Enter X : </label>    
+      <input type="number" id="num1" placeholder="value for X">
+      <label for="num2">Enter Y : </label>
+      <input type="number" id="num2" placeholder="value for Y">
+    </section>
+    
+    <hr>
+    
+    <section class="operations">
+      <h3>Choose your operation: (or refresh the page to clear)</h3>
+      <button name="add" id="add">add (X + Y)</button>
+      <button name="subtract" id="subtract">subtract (X - Y)</button>
+      <button name="multiply" id="multiply">multiply (X * Y)</button>
+      <button name="divide" id="divide">divide (X / Y)</button>
+    </section>
+    <section>
+      <div class="classy-result">
+        <h3 id="result">The result is: </h3>        
+      </div>                
+ 
+      <button name="putResultInForX" id="putResultInForX">Put this in for X</button>
+      <button name="putResultInForY" id="putResultInForY">Put this in for Y</button>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

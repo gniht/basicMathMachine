@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;  
+}
+
+body {
+  background-color: 
+}
+
+.container {  
+  width: 500px;
+  height: 300px;
+  padding: 5px;  
+  justify-content: space-evenly;
+  align-content: center;
+  border: 1px solid grey;
+}
+
+.number-inputs {
+  font-size: 1.1em;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+input{
+  font-size: 1.05em;
+  width: 160px;
+}
+
+button {
+  font-size: 1.1em;
+  padding: 5px;
+  margin: 20px;
+  width: 150px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}
+.classy-result {
+  margin-left: 50px;  
+}

@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "a basic calculator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gniht/calculator.git"
+  },
+  "author": "Jason Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gniht/calculator/issues"
+  },
+  "homepage": "https://github.com/gniht/calculator#readme"
+}
