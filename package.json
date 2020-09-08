@@ -4,7 +4,7 @@
   "description": "a basic calculator",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/gniht/calculator/issues"
   },
-  "homepage": "https://github.com/gniht/calculator#readme"
+  "homepage": "https://github.com/gniht/calculator#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-jest": "^26.3.0",
+    "jest": "^26.4.2"
+  }
 }

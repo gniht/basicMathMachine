@@ -1,38 +1,50 @@
+import { add, subtract, multiply, divide } from "./mathUtils.js";
+
 const num1 = document.getElementById("num1");
 const num2 = document.getElementById("num2");
-const add = document.getElementById("add");
-const subtract = document.getElementById("subtract");
-const multiply = document.getElementById("multiply");
-const divide = document.getElementById("divide");
-const result = document.getElementById("result");
+const addButton = document.getElementById("add");
+const subtractButton = document.getElementById("subtract");
+const multiplyButton = document.getElementById("multiply");
+const divideButton = document.getElementById("divide");
+const resultDisplayElement = document.getElementById("resultElement");
 const putResultInForX = document.getElementById("putResultInForX");
 const putResultInForY = document.getElementById("putResultInForY");
-let numericalResult;
 
+let x, y, result;
 
-add.addEventListener('click', ()=>{
-  numericalResult = num1.valueAsNumber + num2.valueAsNumber;
-  result.textContent = `The result is: ${numericalResult}`;  
+function assignXandYNumericalValues(){
+  x = num1.valueAsNumber;
+  y = num2.valueAsNumber;  
+}
+
+function assignResultToDisplayElement(){
+  resultDisplayElement.textContent = `The result is: ${result}`;  
+}
+
+addButton.addEventListener('click', ()=>{
+  assignXandYNumericalValues();
+  result = add(x, y);
+  assignResultToDisplayElement();    
 });
-subtract.addEventListener('click', ()=>{
-  numericalResult = num1.valueAsNumber - num2.valueAsNumber;
-  result.textContent = `The result is: ${numericalResult}`;  
+subtractButton.addEventListener('click', ()=>{
+  assignXandYNumericalValues();
+  result = subtract(x, y);
+  assignResultToDisplayElement();
 });
-multiply.addEventListener('click', ()=>{
-  numericalResult = num1.valueAsNumber * num2.valueAsNumber;
-  result.textContent = `The result is: ${numericalResult}`;  
+multiplyButton.addEventListener('click', ()=>{
+  assignXandYNumericalValues();
+  result = multiply(x, y);
+  assignResultToDisplayElement(); 
 });
-divide.addEventListener('click', ()=>{
-  if(num2.valueAsNumber === 0){
-    result.textContent = `Cannot divide by 0`;        
-  } else {
-    numericalResult = num1.valueAsNumber / num2.valueAsNumber;
-    result.textContent = `The result is: ${numericalResult}`;
-  }  
+divideButton.addEventListener('click', ()=>{
+  assignXandYNumericalValues();
+  result = divide(x, y);
+  console.log(result);
+  assignResultToDisplayElement();
 });
 putResultInForX.addEventListener('click', ()=>{
-  num1.valueAsNumber = numericalResult;    
+  num1.valueAsNumber = result;    
 });
 putResultInForY.addEventListener('click', ()=>{
-  num2.valueAsNumber = numericalResult;  
+  num2.valueAsNumber = result;  
 });
